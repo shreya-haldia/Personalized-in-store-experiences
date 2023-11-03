@@ -35,7 +35,7 @@ def produce_store_info(producer, num_stores):
         
         for store in store_info:
             store_data_json = json.dumps(store)
-            producer.produce("product", value=store_data_json)
+            producer.produce("stores_products", value=store_data_json)
 
         # Wait for any outstanding messages to be delivered and delivery reports to be received
         producer.flush()
