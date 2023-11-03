@@ -32,7 +32,7 @@ def produce_location_info(producer, num_locations):
         # Produce the location information to the Kafka topic
         for location in location_info:
             location_data_json = json.dumps(location)
-            producer.produce("customers-locations", value=location_data_json)
+            producer.produce("customers_locations", value=location_data_json)
 
         # Wait for any outstanding messages to be delivered and delivery reports to be received
         producer.flush()
