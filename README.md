@@ -150,15 +150,15 @@ Please run the Python script using the following syntax to get the necessary dat
 
 1. Topic: customers_locations
 ```
-python produce_customer_location.py
+python3 produce_customer_location.py
 ```
 1. Topic: products_promotions
 ```
-python products_promotions.py
+python3 products_promotions.py
 ```
 1. Topic: stores_products
 ```
-python generate_store_data.py
+python3 generate_store_data.py
 ```
 ## <header style="font-weight:normal">Generating Valid Promotions based on Proximity to the Store using ksqlDB</header>
 
