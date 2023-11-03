@@ -237,16 +237,13 @@ EMIT CHANGES;
 # <header style="font-weight:normal">Connect Ably Sink Connector to Confluent Cloud</header>
 1. Grab the Connector from the Ably repository: https://github.com/ably/kafka-connect-ably#confluent-cloud-custom-connector.
 2. Go to Connectors, select “Add Connector,” then “Add Plugin.” Follow the instructions in the repo to install the connector.
-  <div align="center"> 
-    <img src="path/filename.jpeg" width=50% height=50%>
-  </div>
+      <div align="center"> 
+        <img src="path/filename.jpeg" width=50% height=50%>
+      </div>
 3. Set it to read from the `NEARBY_CUSTOMERS` topic.
-4. Refer to the Ably Configs File in this repositry to configure the connector
-   <div align="center"> 
-    <img src="path/filename.jpeg" width=50% height=50%>
-  </div>
-5. Configure two channels: Location and Promotions.
-6. (optional) Configure an Ably Firehose connection back to Kafka. 
+4. Refer to the Ably Configs File in this repositry to configure the connector.
+5. Configure two channels within Ably: Location and Promotions.
+6. Configure an Ably Firehose connection back to Kafka. (optional) 
 
 
 ## Congratulations
