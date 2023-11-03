@@ -1,0 +1,14 @@
+#Ably configs
+{
+  "channel": "#{topic}",
+  "client.id": "Ably-Kafka-Connector",
+  "client.key": "<YOUR_ABLY_API_KEY>",
+  "group.id": "ably-connect-cluster",
+  "key.converter": "org.apache.kafka.connect.converters.ByteArrayConverter",
+  "message.name": "#{topic}_message",
+  "topics": "NEARBY_CUSTOMERS",
+  "value.converter": "org.apache.kafka.connect.converters.ByteArrayConverter",
+  "value.converter.schemas.enable": "false"
+}
+
+# When asked for an endpoint, enter rest.ably.io:443:TCP
