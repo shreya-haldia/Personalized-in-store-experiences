@@ -1,0 +1,35 @@
+#Ably configs
+bootstrap.servers= [your bootstrap server]
+key.converter=org.apache.kafka.connect.storage.StringConverter
+value.converter=io.confluent.connect.avro.AvroConverter
+
+ssl.endpoint.identification.algorithm=https
+security.protocol=SASL_SSL
+sasl.mechanism=PLAIN
+sasl.jaas.config=org.apache.kafka.common.security.plain.PlainLoginModule required username="[Cloud_API_Key]" password="[Cloud_API_Secret]";
+request.timeout.ms=20000
+retry.backoff.ms=500
+
+producer.bootstrap.servers=[your bootstrap server]
+producer.ssl.endpoint.identification.algorithm=https
+producer.security.protocol=SASL_SSL
+producer.sasl.mechanism=PLAIN
+producer.sasl.jaas.config=org.apache.kafka.common.security.plain.PlainLoginModule required username="[Cloud_API_Key]" password="[Cloud_API_Secret]";
+producer.request.timeout.ms=20000
+producer.retry.backoff.ms=500
+
+consumer.bootstrap.servers=pkc-921jm.us-east-2.aws.confluent.cloud:9092
+consumer.ssl.endpoint.identification.algorithm=https
+consumer.security.protocol=SASL_SSL
+consumer.sasl.mechanism=PLAIN
+consumer.sasl.jaas.config=org.apache.kafka.common.security.plain.PlainLoginModule required username="[Cloud_API_Key]" password="[Cloud_API_Secret]";
+consumer.request.timeout.ms=20000
+consumer.retry.backoff.ms=500
+
+offset.flush.interval.ms=10000
+offset.storage.file.filename=/tmp/connect.offsets
+
+#Required connection configs for Confluent Cloud Schema Registry
+value.converter.basic.auth.credentials.source=USER_INFO
+value.converter.schema.registry.basic.auth.user.info=[Schema_Registry_API_Key]:+[Schema_Registry_API_Secret]
+value.converter.schema.registry.url=https://psrc-em82q.us-east-2.aws.confluent.cloud
