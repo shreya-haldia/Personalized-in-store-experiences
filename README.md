@@ -235,7 +235,7 @@ EMIT CHANGES;
 ```
 
 # <header style="font-weight:normal">Connect Ably Sink Connector to Confluent Cloud</header>
-1. Grab the Connector from the Ably repository: https://github.com/ably/kafka-connect-ably#confluent-cloud-custom-connector.
+1. Grab the Connector from the [Ably repository](https://github.com/ably/kafka-connect-ably#confluent-cloud-custom-connector).
 2. Go to Connectors, select “Add Connector,” then “Add Plugin.” Follow the instructions in the repo to install the connector.
       <div align="center"> 
         <img src="path/filename.jpeg" width=50% height=50%>
