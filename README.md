@@ -282,9 +282,12 @@ You want to delete any resources that were created during the demo so you don't 
 
 ## Infrastructure
 
-1. Run the following command to delete all resources created by Terraform
+1. Pause the Python scripts in the background on your localhost
+2. Pause and then delete the Ably Sink Connector from the Confluent Cloud UI
+3. Run the following command to delete all resources created by Terraform
    ```bash
    terraform apply -destroy
+   
    
 # References
 <!--- Add links to relevant docs, product webpages, etc. Here are a few examples. -->
