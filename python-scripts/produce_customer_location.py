@@ -9,11 +9,11 @@ fake = faker.Faker()
 
 # Kafka configuration
 conf = {
-    'bootstrap.servers': 'pkc-921jm.us-east-2.aws.confluent.cloud:9092',        # Add your Kafka broker(s) here
+    'bootstrap.servers': '[Broker_URL]',        # Add your Kafka broker(s) here
     'sasl.mechanisms': 'PLAIN',
     'security.protocol': 'SASL_SSL',
-    'sasl.username': 'KHMDL6NACBUOJ2TA',            # Add your SASL username
-    'sasl.password': 'dBpH4Ee9cM7PSwwsrueKVCnyt8R0bNxnvsvQkdbEfIg2LGiFeARsBBU0hP93wjYb'             # Add your SASL password
+    'sasl.username': '[Cloud_API_Key]',          
+    'sasl.password': '[Cloud_API_Secret]'           
 }
 
 # Function to generate mock customer location data
