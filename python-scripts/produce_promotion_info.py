@@ -30,7 +30,7 @@ def produce_promotion_info(producer, num_promotions):
         # Produce the promotion information to the Kafka topic
         for promotion in promotion_info:
             promotion_data_json = json.dumps(promotion)
-            producer.produce("products-promotions", value=promotion_data_json)
+            producer.produce("products_promotions", value=promotion_data_json)
 
         # Wait for any outstanding messages to be delivered and delivery reports to be received
         producer.flush()
