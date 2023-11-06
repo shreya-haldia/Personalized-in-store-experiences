@@ -23,7 +23,7 @@ This demo guides you through the process of manipulating customer and store data
 
 
 <div align="center"> 
-  <img src="images/Architecture.png" width =100% height=100%>   <!--- Replace the path with your arch image location -->
+  <img src="images/Architecture.png" width =70% height=70%>   <!--- Replace the path with your arch image location -->
 </div>
 
 
