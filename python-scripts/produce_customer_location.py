@@ -22,8 +22,8 @@ def produce_location_info(producer, num_locations):
         location_info = []
         for _ in range(num_locations):
             location = {
-                'latitude': float(fake.latitude()),    # Latitude
-                'longitude': float(fake.longitude()),  # Longitude
+                'latitude': round(float(fake.latitude()),4),    # Latitude
+                'longitude': round(float(fake.longitude()),4),  # Longitude
                 'uid': fake.uuid4(),                # Generate a random UUID as uid
                 'country': "USA"
             }
