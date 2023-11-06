@@ -252,7 +252,7 @@ Congratulations on building an in-store personalisation streaming application in
 
 <!--- Add screenshot -->
 <div align="center"> 
-  <img src="images/StreamLineage.png" width=50% height=50%>
+  <img src="images/StreamLineage.png" width=100% height=100%>
 </div>
 
 ## Confluent Cloud Stream Governance
