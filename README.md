@@ -68,12 +68,12 @@ In order to successfully complete this demo you need to install few tools before
 
 4. Create Confluent Cloud API keys by following the steps in UI. Click on the button that is present on the right top section and click on Cloud API Key.
 <div align="center"> 
-  <img src="path/filename.jpeg" width =100% height=100%>
+  <img src="images/cloud_api_key1.jpeg" width =100% height=100%>
 </div>
 
 Now click Add Key to generate API keys and store it as we will be using that key in this demo.
 <div align="center"> 
-  <img src="path/filename.jpeg" width =100% height=100%>
+  <img src="images/cloud_api_key2.jpeg" width =100% height=100%>
 </div>
     
    > **Note:** This is different than Kafka cluster API keys. 
