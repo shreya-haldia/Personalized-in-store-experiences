@@ -238,7 +238,7 @@ EMIT CHANGES;
 1. Grab the Connector from the [Ably repository](https://github.com/ably/kafka-connect-ably#confluent-cloud-custom-connector).
 2. Go to Connectors, select “Add Connector,” then “Add Plugin.” Follow the instructions in the repo to install the connector.
       <div align="center"> 
-        <img src="path/filename.jpeg" width=50% height=50%>
+        <img src="images/Set_up_Ably_Sink 1.png" width=50% height=50%>
       </div>
 3. Set it to read from the `NEARBY_CUSTOMERS` topic.
 4. Refer to the Ably Configs File in this repositry to configure the connector.
@@ -252,7 +252,7 @@ Congratulations on building an in-store personalisation streaming application in
 
 <!--- Add screenshot -->
 <div align="center"> 
-  <img src="path/filename.jpeg" width=50% height=50%>
+  <img src="images/StreamLineage.png" width=50% height=50%>
 </div>
 
 ## Confluent Cloud Stream Governance
