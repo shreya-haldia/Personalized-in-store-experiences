@@ -98,7 +98,7 @@ resource "confluent_kafka_topic" "stores_products" {
 }
 
   
-resource "confluent_ksql_cluster" "example" {
+resource "confluent_ksql_cluster" "Notifications" {
   display_name = "Notifications"
   csu          = 4
   kafka_cluster {
