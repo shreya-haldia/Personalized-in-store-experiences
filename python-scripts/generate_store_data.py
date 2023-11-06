@@ -25,8 +25,8 @@ def produce_store_info(producer, num_stores):
                 'SKU': fake.random_int(min=1000, max=9999),  # SKU
                 'segment': fake.random_element(elements=('SegmentA', 'SegmentB', 'SegmentC')),  # Segment
                 'variant': fake.random_element(elements=('Variant1', 'Variant2', 'Variant3')),  # Variant
-                'latitude': float(fake.latitude()),  # Latitude
-                'longitude': float(fake.longitude()),  # Longitude
+                'latitude': round(float(fake.latitude()),4),  # Latitude
+                'longitude': round(float(fake.longitude()),4),  # Longitude
                 'country': "USA"
             }
             store_info.append(store)
