@@ -233,6 +233,10 @@ ON C.COUNTRY = P.COUNTRY
 WHERE dist_to_store <= 100
 EMIT CHANGES;
 ```
+You should be able to see the flow in ksqlDB like so:
+      <div align="center"> 
+        <img src="images/ksqlDB_flow.png" width=100% height=100%>
+      </div>
 
 # <header style="font-weight:normal">Connect Ably Sink Connector to Confluent Cloud</header>
 1. Grab the Connector from the [Ably repository](https://github.com/ably/kafka-connect-ably#confluent-cloud-custom-connector).
@@ -240,20 +244,19 @@ EMIT CHANGES;
       <div align="center"> 
         <img src="images/Set_up_Ably_Sink 1.png" width=50% height=50%>
       </div>
-3. Set it to read from the `NEARBY_CUSTOMERS` topic.
+3. Set it to read from the `NEARBY_CUSTOMERS` topic. 
 4. Refer to the Ably Configs File in this repositry to configure the connector.
+   <div align="center"> 
+        <img src="images/Ably_settings.png" width=50% height=50%>
+      </div>
 5. Configure two channels within Ably: Location and Promotions.
 6. Configure an Ably Firehose connection back to Kafka. (optional) 
 
 
 ## Congratulations
 
-Congratulations on building an in-store personalisation streaming application in Confluent Cloud! Your complete pipeline should resemble the following one.
+Congratulations on building an in-store personalisation streaming application in Confluent Cloud! 
 
-<!--- Add screenshot -->
-<div align="center"> 
-  <img src="images/StreamLineage.png" width=100% height=100%>
-</div>
 
 ## Confluent Cloud Stream Governance
 
@@ -267,11 +270,10 @@ Confluent offers data governance tools such as Stream Quality, Stream Catalog, a
     - Where is it going?
     - Where, when, and how was it transformed?
 
-In our use case, the stream lineage appears as follows: we utilize a Python script to generate events that are sent to the quote_requests topic. Then we use KSQLDB to create streams for calculating the premium quotes in real-time.
-
+In our use case, the stream lineage appears as follows: we utilize a Python script to generate events that are sent to the 3 topics. Then we use KSQLDB to create streams for calculating the premium quotes in real-time.
 
 <div align="center"> 
-  <img src="images/Stream Lineage.png" width =100% heigth=100%>
+  <img src="images/StreamLineage.png" width =100% heigth=100%>
 </div>
    
 
