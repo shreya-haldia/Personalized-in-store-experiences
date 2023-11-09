@@ -8,7 +8,11 @@
 # Building Customer Engagement One Store at a Time
 
 
-Online customer interactions have transitioned to highly personalized experiences, influenced by increased data and sophisticated analytics. This trend extends to in-store experiences, where customers expect the same level of tailored service they receive online. There's a big opportunity for companies to improve in-store experiences and attract digital-first customers, despite occasional data gaps.
+Customers today expect their shopping experiences to be ‘personalized’. They expect to be shown products suited to their exact needs and wants, at the right time, at a reasonable price. And while this expectation has been created by the innovation of online retailers (e.g. via in-session product recommendation engines and dynamic pricing), it’s increasingly being met by vendors with physical stores. 
+
+Hybrid retailers (i.e. those with online and physical presences), in particular, are meeting customer demands by delivering “in-store personalization”. They’re leveraging technologies like Confluent and Ably to join and process disparate sets (online, in-app, and offline), and provide customers with some form of ‘personalized’ experience while they’re in a physical store – this could be individually-targeted messaging or personalized offers, for example.  
+
+In this demo, we’re going to guide you through one example of in-store personalization which involves advertising relevant discounts to customers via a mobile application while they’re browsing products in a physical store. The objective of this use case, which has been deployed by a number of Confluent customers, is to leverage customer data and geo-fencing in order to increase in-store conversion rates of digital promotions. 
 
 
 
@@ -18,7 +22,9 @@ Online customer interactions have transitioned to highly personalized experience
 
 <!--- Add one paragraph about the architecture that you are going to deploy for the use case -->
 
-This demo guides you through the process of manipulating customer and store data to match promotions, location, and segmentation together in real time using confluent kafka. The goal is to increase conversions by geo-targeting app users when they enter a store.
+This is the high-level architecture we’ll be following for this use case. We’ll generate mock data using Python script to populate three topics in Confluent Cloud; one each for customer location, product location (in-store), and current promotions. 
+
+We’ll then use stream processing to join disparate streams on customer locations and valid promotions, and create a new stream (“NEARBY_CUSTOMERS”), filtering customers who are 100 feet or less away from a particular product. Lastly, we’ll stream this data to Ably via the Ably Sink connector. Ably will then notify a customer via an app of current promotions relating to nearby products in-store. 
 
 
 
@@ -160,7 +166,7 @@ python3 products_promotions.py
 ```
 python3 generate_store_data.py
 ```
-## <header style="font-weight:normal">Generating Valid Promotions based on Proximity to the Store using ksqlDB</header>
+## <header style="font-weight:normal">Generating Valid Promotions based on Proximity to In-Store Products using ksqlDB</header>
 
 <!--- Add all the KSQLDB queries that are reqiured. Below is one sample. Will include Flink here as well after GA. -->
 
@@ -270,7 +276,8 @@ Confluent offers data governance tools such as Stream Quality, Stream Catalog, a
     - Where is it going?
     - Where, when, and how was it transformed?
 
-In our use case, the stream lineage appears as follows: we utilize a Python script to generate events that are sent to the 3 topics. Then we use KSQLDB to create streams for calculating the premium quotes in real-time.
+In our use case, the stream lineage appears as follows: we utilize a Python script to generate events that are sent to the 3 topics. Then we use KSQLDB to create streams for calculating valid in-store promotions and identifying customers who are close to promoted products. 
+
 
 <div align="center"> 
   <img src="images/StreamLineage.png" width =100% heigth=100%>
@@ -285,8 +292,6 @@ You want to delete any resources that were created during the demo so you don't 
 3. Run the following command to delete all resources created by Terraform
    ```bash
        terraform apply -destroy
-
-## Infrastructure
 
 
    
