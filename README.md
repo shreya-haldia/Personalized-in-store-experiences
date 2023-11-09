@@ -10,7 +10,7 @@
 
 Customers today expect their shopping experiences to be ‘personalized’. They expect to be shown products suited to their exact needs and wants, at the right time, at a reasonable price. And while this expectation has been created by the innovation of online retailers (e.g. via in-session product recommendation engines and dynamic pricing), it’s increasingly being met by vendors with physical stores. 
 
-Hybrid retailers (i.e. those with online and physical presences), in particular, are meeting customer demands by delivering “in-store personalization”. They’re leveraging technologies like Confluent and Ably to join and process disparate sets (online, in-app, and offline), and provide customers with some form of ‘personalized’ experience while they’re in a physical store – this could be individually-targeted messaging or personalized offers, for example.  
+Hybrid retailers (i.e. those with online and physical presences), in particular, are meeting customer demands by delivering “in-store personalization”. They’re leveraging technologies like Confluent and Ably to join and process disparate data sets (online, in-app, and offline), and provide customers with some form of ‘personalized’ experience while they’re in a physical store – this could be individually-targeted messaging or personalized offers, for example.  
 
 In this demo, we’re going to guide you through one example of in-store personalization which involves advertising relevant discounts to customers via a mobile application while they’re browsing products in a physical store. The objective of this use case, which has been deployed by a number of Confluent customers, is to leverage customer data and geo-fencing in order to increase in-store conversion rates of digital promotions. 
 
@@ -33,15 +33,6 @@ We’ll then use stream processing to join disparate streams on customer locatio
 </div>
 
 
-
-This case study showcases how a company effectively addressed an industry challenge through an innovative hybrid retail approach. In the case of a hybrid retail customer, the goal is (most likely) to increase conversions by geo-targeting app users when they enter a store. One organization found that their customers would look at their app for coupons and deals of the day before heading in–but memories are short, and without a reminder or a nudge, it was too easy to forget what they came in for, and not be aware of updated promotions. So they combined three things:
-
-1. An app designed for coupons, loyalty, and wishlists, which aids customers in creating, managing, and locating products in-store. It also encouraged continuous app usage for precise location information, while alternate methods such as in-store WiFi or call-to-action signs enable similar functionality through HTML5 geolocation. 
-2. Geofencing targeted store sections linked to specific product categories or SKUs involves stream processing to match user-triggered geofences with promotions and product segments. For larger retail spaces with dynamic inventory changes, a distributed matching process updates search results for related promotions via a decisioning engine. While limitations in OS geofence actions may necessitate server-side geofence matching for faster responses, this complex strategy offers precision and valuable analytics, albeit with potential privacy concerns. A simplified 'lite' version aids in initiating functionalities like pickup notifications or basic distance-based promotions for users accessing the website through HTML5Geo-enabled browsers.
-
-A stream processing engine like ksqldb can match current promotions or product locations within a rough distance from a point; you might not always get to-the-meter data
-
-These tools combine to create a way to alert customers when they qualify for deals, need help, are near an item they want, or to show alternative items as they browse.
 
 # Requirements
 
