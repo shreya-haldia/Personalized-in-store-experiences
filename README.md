@@ -218,7 +218,7 @@ FROM STORES_PRODUCTS S JOIN PRODUCTS_PROMOTIONS P WITHIN 1 HOUR
 ON S.SEGMENT = P.SEGMENT 
 EMIT CHANGES;
 ```
-1. Create a ksqlDB Stream `NEARBY_CUSTOMERS` to genrate the Geo-distance between the customer and the store location and filter the nearby customers.
+5. Create a ksqlDB Stream `NEARBY_CUSTOMERS` to genrate the Geo-distance between the customer and the store location and filter the nearby customers.
 
 ```SQL
 CREATE STREAM NEARBY_CUSTOMERS WITH (KAFKA_TOPIC='NEARBY_CUSTOMERS') AS
